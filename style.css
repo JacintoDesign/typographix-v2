@@ -99,6 +99,12 @@ section > h2 {
 }
 
 /* Footer */
+.wave {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
 .footer {
   position: absolute;
   bottom: 0;

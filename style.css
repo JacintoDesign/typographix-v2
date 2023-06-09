@@ -22,6 +22,7 @@
   --background: #121212;
 }
 
+/* General */
 html {
   box-sizing: border-box;
 }
@@ -39,6 +40,16 @@ main {
   position: relative;
 }
 
+a {
+  text-decoration: none;
+  color: var(--on-background);
+}
+
+  a:hover {
+    padding-bottom: 5px;
+    border-bottom: 5px solid var(--on-background);
+  }
+
 /* Sections */
 section {
   min-height: 100vh;
@@ -47,10 +58,11 @@ section {
   place-items: center;
 }
 
-section > h2 {
+h2 {
   font-size: 40px;
 }
 
+/* Section 1 */
 /* Dark Mode Toggle */
 .theme-switch-wrapper {
   display: flex;
@@ -169,7 +181,47 @@ input:checked + .slider::before {
   transform: scale(1.1);
 }
 
-/* Footer */
+/* Section 2 */
+.main-image {
+  height: 50%;
+  width: auto;
+  position: relative;
+  top: -25%;
+  border: 10px solid var(--on-background);
+  padding: 20px;
+}
+
+/* Section 3 */
+.image-container {
+  position: relative;
+  top: -25%;
+  height: 50vh;
+}
+
+.small-image {
+  height: 50%;
+  width: auto;
+  border: 10px solid var(--on-background);
+  padding: 20px;
+}
+
+.small-image:not(:first-child) {
+  margin-left: 20px;
+}
+
+/* Section 4 */
+.blog-container {
+  position: relative;
+  top: -20%;
+  width: 50%;
+}
+
+.blog-item {
+  margin-bottom: 50px;
+}
+
+/* Section 5 */
+/* Wave */
 .wave {
   width: 100%;
 }
@@ -180,6 +232,7 @@ input:checked + .slider::before {
     left: 0;
   }
 
+/* Footer */
 .footer {
   position: absolute;
   bottom: 0;

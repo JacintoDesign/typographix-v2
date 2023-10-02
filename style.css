@@ -148,19 +148,20 @@ input:checked + .slider::before {
   font-size: 100px;
   font-weight: 500;
   font-style: italic;
-  animation: focus-in-contract 3s linear 0s 1 normal none;
+  animation: focus-in-contract 3s linear;
   text-align: center;
 }
 
 @keyframes focus-in-contract {			
   0% {
-    letter-spacing:1em;
-    filter:blur(12px);
-    opacity:0;
+    letter-spacing: 1em;
+    filter: blur(12px);
+    opacity: 0;
   }
   100% {
-    filter:blur(0);
-    opacity:1;
+    letter-spacing: 0;
+    filter: blur(0);
+    opacity: 1;
   }
 }
 
@@ -173,7 +174,7 @@ input:checked + .slider::before {
 }
 
 .social-media-icons i {
-  animation: focus-in-contract 3s linear 0s 1 normal none;
+  animation: focus-in-contract 3s linear;
   transition: transform 0.5s ease;
 }
 
@@ -211,9 +212,8 @@ input:checked + .slider::before {
 
 /* Section 4 */
 .blog-container {
-  position: relative;
-  top: -20%;
-  width: 50%;
+  margin: 0 auto;
+  width: 50ch;
 }
 
 .blog-item {
@@ -235,11 +235,8 @@ input:checked + .slider::before {
 /* Footer */
 .footer {
   position: absolute;
-  bottom: 0;
+  bottom: 20px;
   width: 100%;
-}
-
-.footer p {
   text-align: center;
   color: white;
 }

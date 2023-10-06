@@ -1,23 +1,22 @@
-const toggleSwitch = document.querySelector('input[type="checkbox"]');
+const themeSwitcher = document.getElementById('theme-switcher');
 const toggleIcon = document.getElementById('toggle-icon');
 
 // Dark Mode Styles
 function darkMode() {
-  toggleIcon.children[0].textContent = 'Dark Mode';
-  toggleIcon.children[1].classList.replace('fa-sun', 'fa-moon');
-  imageMode('dark');
+  themeSwitcher.children[0].textContent = 'Dark Mode';
+  themeSwitcher.children[1].classList.replace('fa-sun', 'fa-moon');
 }
 
 // Light Mode Styles
 function lightMode() {
-  toggleIcon.children[0].textContent = 'Light Mode';
-  toggleIcon.children[1].classList.replace('fa-moon', 'fa-sun');
-  imageMode('light');
+  themeSwitcher.children[0].textContent = 'Light Mode';
+  themeSwitcher.children[1].classList.replace('fa-moon', 'fa-sun');
 }
 
-// Switch Theme Dynamically
-function switchTheme(event) {
-  if (event.target.checked) {
+// Switch Theme 
+function switchTheme() {
+  const currentTheme = document.documentElement.getAttribute('data-theme');
+  if (currentTheme === 'light') {
     document.documentElement.setAttribute('data-theme', 'dark');
     localStorage.setItem('theme', 'dark');
     darkMode();
@@ -29,15 +28,16 @@ function switchTheme(event) {
 }
 
 // Event Listener
-toggleSwitch.addEventListener('change', switchTheme);
+themeSwitcher.addEventListener('click', switchTheme);
 
 // Check Local Storage For Theme
-const currentTheme = localStorage.getItem('theme');
-if (currentTheme) {
-  document.documentElement.setAttribute('data-theme', currentTheme);
+const currentThemeFromLocalStorage = localStorage.getItem('theme');
+if (currentThemeFromLocalStorage) {
+  document.documentElement.setAttribute('data-theme', currentThemeFromLocalStorage);
 
-  if (currentTheme === 'dark') {
-    toggleSwitch.checked = true;
+  if (currentThemeFromLocalStorage === 'dark') {
     darkMode();
+  } else {
+    lightMode();
   }
 }

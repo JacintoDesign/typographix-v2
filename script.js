@@ -16,7 +16,7 @@ function lightMode() {
 // Switch Theme 
 function switchTheme() {
   const currentTheme = document.documentElement.getAttribute('data-theme');
-  if (currentTheme === 'light') {
+  if (!currentTheme || currentTheme === 'light') {
     document.documentElement.setAttribute('data-theme', 'dark');
     localStorage.setItem('theme', 'dark');
     darkMode();

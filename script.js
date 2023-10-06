@@ -1,5 +1,4 @@
 const themeSwitcher = document.getElementById('theme-switcher');
-const toggleIcon = document.getElementById('toggle-icon');
 
 // Dark Mode Styles
 function darkMode() {
@@ -34,7 +33,6 @@ themeSwitcher.addEventListener('click', switchTheme);
 const currentThemeFromLocalStorage = localStorage.getItem('theme');
 if (currentThemeFromLocalStorage) {
   document.documentElement.setAttribute('data-theme', currentThemeFromLocalStorage);
-
   if (currentThemeFromLocalStorage === 'dark') {
     darkMode();
   } else {

@@ -3,13 +3,11 @@
 /* Colors */
 :root {
   --on-background: rgb(66, 66, 66);
-  --on-background-alt: rgba(66, 66, 66, 0.7);
   --background: rgb(255, 255, 255);
 }
 
 [data-theme="dark"] {
   --on-background: rgba(255, 255, 255, 0.9);
-  --on-background-alt: rgba(255, 255, 255, 0.7);
   --background: rgb(18, 18, 18);
 }
 
@@ -66,32 +64,32 @@ h2 {
   cursor: pointer;
 }
 
-.theme-switcher span {
-  margin-right: 10px;
-  font-size: 1rem;
-  color: var(--on-background);
-}
+  .theme-switcher span {
+    margin-right: 10px;
+    font-size: 1rem;
+    color: var(--on-background);
+  }
 
 .fas {
   font-size: 30px;
 }
 
-.fas:hover {
-  transform: scale(1.1);
-}
+  .fas:hover {
+    transform: scale(1.1);
+  }
 
 /* Header */
 .header {
   width: 100vw;
 }
 
-.header h1 {
-  font-size: 100px;
-  font-weight: 500;
-  font-style: italic;
-  animation: focus-in-contract 3s linear;
-  text-align: center;
-}
+  .header h1 {
+    font-size: 100px;
+    font-weight: 500;
+    font-style: italic;
+    animation: focus-in-contract 3s linear;
+    text-align: center;
+  }
 
 @keyframes focus-in-contract {			
   0% {
@@ -114,14 +112,14 @@ h2 {
   text-align: center;
 }
 
-.social-media-icons i {
-  animation: focus-in-contract 3s linear;
-  transition: transform 0.5s ease;
-}
+  .social-media-icons i {
+    animation: focus-in-contract 3s linear;
+    transition: transform 0.5s ease;
+  }
 
-.social-media-icons i:hover {
-  transform: scale(1.1);
-}
+  .social-media-icons i:hover {
+    transform: scale(1.1);
+  }
 
 /* Section 2 */
 .main-image {
@@ -147,9 +145,9 @@ h2 {
   padding: 20px;
 }
 
-.small-image:not(:first-child) {
-  margin-left: 20px;
-}
+  .small-image:not(:first-child) {
+    margin-left: 20px;
+  }
 
 /* Section 4 */
 .blog-container {
